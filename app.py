@@ -1,7 +1,12 @@
-import openai
+from openai import OpenAI
+import os
 import gradio as gr
 
-openai.api_key = "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"
+os.environ["OPENAI_API_KEY"] = "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"
+
+client = OpenAI(
+    api_key=os.environ.get("OPENAI_API_KEY")
+)
 
 messages = [
     {"role": "system", "content": "You are a helpful and kind AI Assistant."},
@@ -10,7 +15,7 @@ messages = [
 def chatbot(input):
     if input:
         messages.append({"role": "user", "content": input})
-        chat = openai.ChatCompletion.create(
+        chat = client.chat.completions.create(
             model="gpt-3.5-turbo", messages=messages
         )
         reply = chat.choices[0].message.content

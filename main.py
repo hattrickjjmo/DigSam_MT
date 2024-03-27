@@ -1,9 +1,4 @@
-import numpy as np
+import openai
+import gradio as gr
 
-a = 8
-b = 5
-
-def main():
-    print("Hello World")
-
-main()
+openai.api_key = "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"

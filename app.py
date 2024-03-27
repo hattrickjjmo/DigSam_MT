@@ -17,8 +17,8 @@ def chatbot(input):
         messages.append({"role": "assistant", "content": reply})
         return reply
 
-inputs = gr.inputs.Textbox(lines=7, label="Chat with AI")
-outputs = gr.outputs.Textbox(label="Reply")
+inputs = gr.components.Textbox(lines=7, label="Chat with AI")
+outputs = gr.components.Textbox(label="Reply")
 
 gr.Interface(fn=chatbot, inputs=inputs, outputs=outputs, title="AI Chatbot", description="Ask anything you want", theme="compact").launch(share=True)
 

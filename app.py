@@ -2,7 +2,7 @@ from openai import OpenAI
 import os
 import gradio as gr
 
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "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" #deprecated
 
 client = OpenAI(
     api_key=os.environ.get("OPENAI_API_KEY")

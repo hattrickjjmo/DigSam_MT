@@ -21,3 +21,5 @@ inputs = gr.inputs.Textbox(lines=7, label="Chat with AI")
 outputs = gr.outputs.Textbox(label="Reply")
 
 gr.Interface(fn=chatbot, inputs=inputs, outputs=outputs, title="AI Chatbot", description="Ask anything you want", theme="compact").launch(share=True)
+
+

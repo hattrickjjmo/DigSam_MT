@@ -5,7 +5,6 @@
  Note: This code is mostly deprecated, and has been revised in this project
 
  The code does rely on API-key from OpenAI's ChatGPT-4 paid version, although the model used is the gpt-3.5-turbo
- It also seems you need to have a paid account +  pay for API tokens, which is utterly stupid
 
 
  The application requires the local machine to have downloaded: 

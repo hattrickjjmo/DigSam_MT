@@ -2,14 +2,14 @@ from openai import OpenAI
 import os
 import gradio as gr
 
-os.environ["OPENAI_API_KEY"] = "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" #deprecated
+os.environ["OPENAI_API_KEY"] = "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"
 
 client = OpenAI(
     api_key=os.environ.get("OPENAI_API_KEY")
 )
 
 messages = [
-    {"role": "system", "content": "You are a helpful and kind AI Assistant."},
+    {"role": "system", "content": "You are a helpful and kind AI Assistant who specializes in immigration to Norway. You answer only to questions regarding how people from different countries can immigrate to Norway, in other words give answers about each of the steps on has to take and how to take them. You may also answer questions regarding steps one can take after arriving in Norway, such as how to apply for loans, or find housing and such."},
 ]
 
 def chatbot(input):
@@ -25,6 +25,6 @@ def chatbot(input):
 inputs = gr.components.Textbox(lines=7, label="Chat with AI")
 outputs = gr.components.Textbox(label="Reply")
 
-gr.Interface(fn=chatbot, inputs=inputs, outputs=outputs, title="AI Chatbot", description="Ask anything you want", theme="compact").launch(share=True)
+gr.Interface(fn=chatbot, inputs=inputs, outputs=outputs, title="ImmiBot", description="Ask me anything you want about the immigration process to Norway :)", theme="compact").launch(share=True)
 
 

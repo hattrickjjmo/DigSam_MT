@@ -29,11 +29,13 @@ def completion(input, history):
             time.sleep(0.003)
             yield reply[:i+i]
 
-# Gradio's own premade chat interface
-gr.ChatInterface(
+
+
+# Main function launching gradio's own premade chat interface
+immibot = gr.ChatInterface(
     completion, 
     chatbot=gr.Chatbot(height=500), 
-    textbox=gr.Textbox(placeholder="Ask me any questions about immigrating to Norway", container=False, scale=7, height=100), 
+    textbox=gr.Textbox(placeholder="Ask me any questions about immigrating to Norway", container=False, scale=7), 
     title="ImmiBot", 
     description="ImmiBot answers anything you may wonder about regarding immigration to Norway",
     theme="soft",
@@ -41,7 +43,9 @@ gr.ChatInterface(
     #cache_examples=True,
     retry_btn=None, 
     undo_btn=None
-    ).launch(share=True)
+    )
+
+immibot.launch(share=True)
 
 
 

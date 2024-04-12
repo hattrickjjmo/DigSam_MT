@@ -16,7 +16,7 @@ def scrape_page(url):
         print("Failed to retrieve webpage: ", response.status_code)
         return None, None
 
-# Function to create database and populate it webpage info
+# Function to create database and populate it with webpage info
 def create_database():
     conn = sqlite3.connect('webpages.db')
     c = conn.cursor()

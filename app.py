@@ -30,7 +30,7 @@ def chatbot(input):
 inputs = gr.components.Textbox(lines=7, label="Chat with AI")
 outputs = gr.components.Textbox(label="Reply")
 
-create_database()
+# create_database()
 gr.Interface(fn=chatbot, inputs=inputs, outputs=outputs, title="ImmiBot", description="Ask me anything you want about the immigration process to Norway :)", theme="compact").launch(share=True)
 
 

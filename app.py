@@ -39,8 +39,8 @@ immibot = gr.ChatInterface(
     title="ImmiBot", 
     description="ImmiBot answers anything you may wonder about regarding immigration to Norway",
     theme="soft",
-    #examples=["I am from Denmark. How do I begin my journey to immigrate to Norway?", "What is BankID", "Can you conversate in Spanish?"],
-    #cache_examples=True,
+    examples=["I am from Denmark. How do I begin my journey to immigrate to Norway?", "What is BankID", "Where in the world is Carmen SanDiego?"],
+    cache_examples=True,
     retry_btn=None, 
     undo_btn=None
     )

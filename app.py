@@ -1,10 +1,10 @@
 from openai import OpenAI
 import os
 import gradio as gr
-from botfunctions import create_database
+# from botfunctions import create_database
 import time
 
-# Preamble
+# Preamble variables
 os.environ["OPENAI_API_KEY"] = "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"
 client = OpenAI(
     api_key=os.environ.get("OPENAI_API_KEY")
@@ -24,7 +24,7 @@ def completion(input, history):
         )
         reply = chat.choices[0].message.content
         messages.append({"role": "assistant", "content": reply})
-        # Faking streaming chat just for visuals
+        # Faking streaming chat just for visuals, replace with 'return reply' to display entire reply at once
         for i in range(len(reply)):
             time.sleep(0.003)
             yield reply[:i+i]

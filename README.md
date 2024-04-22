@@ -6,9 +6,9 @@
 
  The code does rely on API-key from OpenAI's ChatGPT-4 paid version, although the model used is the gpt-3.5-turbo
 
-
  The application requires the local machine to have downloaded: 
   - python version at least 3.9
   - packages openai and gradio
 
-These can easily be downloaded by running <pip install -r requirements.txt> in your terminal
+The packages can easily be downloaded by running <pip install -r requirements.txt> in your terminal
+The main-code to run for the chatbot is the 'app.py' file

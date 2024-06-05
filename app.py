@@ -5,7 +5,7 @@ import gradio as gr
 import time
 
 # Preamble variables
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "sk-************************************************"
 client = OpenAI(
     api_key=os.environ.get("OPENAI_API_KEY")
 )
